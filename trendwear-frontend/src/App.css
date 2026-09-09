@@ -1,0 +1,11 @@
+/* Global app-level tweaks layered on top of Bootstrap's dark/warning theme
+   used throughout the site (bg-dark, text-warning, btn-warning). */
+
+body {
+  background-color: #000;
+}
+
+.card-img-top {
+  height: 240px;
+  object-fit: cover;
+}
