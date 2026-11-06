@@ -2,7 +2,7 @@ const multer = require("multer");
 const ApiError = require("./apiError");
 
 // Buffer the upload in memory and stream it straight to Cloudinary in the
-// controller — no need to write product images to local disk.
+// controller; no need to write product images to local disk.
 const storage = multer.memoryStorage();
 
 const fileFilter = (req, file, cb) => {

@@ -65,14 +65,14 @@ exports.verifyPayment = asyncHandler(async (req, res) => {
   res.json(response.data);
 });
 
-// Paystack Webhook — Paystack signs every webhook request with
+// Paystack Webhook: Paystack signs every webhook request with
 // HMAC-SHA512(body, PAYSTACK_SECRET_KEY) in the x-paystack-signature
 // header. Without checking it, anyone who finds this URL could POST a
 // fake "charge.success" event and mark any order as paid for free.
 exports.paystackWebhook = asyncHandler(async (req, res) => {
   const signature = req.headers["x-paystack-signature"];
   // Signed over the exact raw bytes Paystack sent (captured by the
-  // express.json `verify` hook in server.js) — re-serializing the parsed
+  // express.json `verify` hook in server.js); re-serializing the parsed
   // req.body could produce different bytes and false-reject legitimate events.
   const expected = crypto
     .createHmac("sha512", process.env.PAYSTACK_SECRET_KEY)

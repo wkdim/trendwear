@@ -3,7 +3,7 @@ const Cart = require("../models/Cart");
 const asyncHandler = require("../middleware/asyncHandler");
 const ApiError = require("../middleware/apiError");
 
-// Place order — validates stock against the live product records and
+// Place order: validates stock against the live product records and
 // decrements it, so two customers can't oversell the same last item.
 exports.placeOrder = asyncHandler(async (req, res) => {
   const cart = await Cart.findOne({ user: req.user._id }).populate("products.product");

@@ -18,7 +18,7 @@ function PaymentCallback() {
 
     if (!reference || !orderId) {
       setStatus("failed");
-      setMessage("Missing payment reference — if you completed payment, check your orders.");
+      setMessage("Missing payment reference: if you completed payment, check your orders.");
       return;
     }
 
@@ -48,7 +48,7 @@ function PaymentCallback() {
       {status === "success" ? (
         <>
           <h2 className="text-warning mb-3">Payment Successful 🎉</h2>
-          <p className="text-light">Thanks for your order — we're getting it ready.</p>
+          <p className="text-light">Thanks for your order: we are getting it ready.</p>
         </>
       ) : (
         <>

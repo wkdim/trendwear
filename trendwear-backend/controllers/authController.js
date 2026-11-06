@@ -12,7 +12,7 @@ const generateToken = (user) => {
   );
 };
 
-// Register. `role` is intentionally never read from the request body —
+// Register. `role` is intentionally never read from the request body:
 // every new account is a customer. Admins are promoted directly in the
 // database (see README) so there is no self-service way to become one.
 exports.register = asyncHandler(async (req, res) => {

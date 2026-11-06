@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Fail fast instead of the Mongoose default of silently queueing queries
-// (up to bufferTimeoutMS, ~10s) whenever the DB is unreachable — that
+// (up to bufferTimeoutMS, ~10s) whenever the DB is unreachable: that
 // default turns a down database into every request hanging for 10 seconds
 // before erroring, instead of erroring immediately.
 mongoose.set('bufferCommands', false);

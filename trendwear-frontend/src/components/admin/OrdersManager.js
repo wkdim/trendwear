@@ -49,7 +49,7 @@ function OrdersManager() {
           <tbody>
             {orders.map((order) => (
               <tr key={order._id}>
-                <td>{order.user?.name || "—"}</td>
+                <td>{order.user?.name || "-"}</td>
                 <td>{order.products.length}</td>
                 <td>GH₵ {order.totalAmount}</td>
                 <td>

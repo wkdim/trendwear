@@ -47,5 +47,5 @@ npm start                # http://localhost:3000
 
 ## Known follow-ups (out of scope for this pass)
 
-- The Contact page is client-only (no `/api/contact` endpoint yet) — `nodemailer`/`EMAIL_*` config exists in the backend for this but isn't wired up.
+- The Contact page is client-only (no `/api/contact` endpoint yet): `nodemailer`/`EMAIL_*` config exists in the backend for this but isn't wired up.
 - Create React App's toolchain is in maintenance mode with known-vulnerable transitive dev dependencies (build-time only, not runtime). Consider migrating to Vite when there's room for it.

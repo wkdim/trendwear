@@ -1,7 +1,7 @@
 // Integration tests against the real Express app + Mongoose models.
 //
 // The DB-dependent cases only run when explicitly opted into with
-// RUN_DB_TESTS=true (and a real MONGO_URI) — this repo's .env values are
+// RUN_DB_TESTS=true (and a real MONGO_URI); this repo's .env values are
 // placeholders, not a guaranteed live database, and this sandbox has no
 // reachable Mongo at all. The decision is made synchronously at file-load
 // time (not via an async "try connecting, skip on failure" probe): mixing

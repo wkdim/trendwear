@@ -19,7 +19,7 @@ exports.addProduct = asyncHandler(async (req, res) => {
   res.status(201).json(product);
 });
 
-// Get All Products — supports ?search=, ?category=, ?page=, ?limit=
+// Get All Products: supports ?search=, ?category=, ?page=, ?limit=
 exports.getProducts = asyncHandler(async (req, res) => {
   const { search, category } = req.query;
   const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
@@ -69,7 +69,7 @@ exports.deleteProduct = asyncHandler(async (req, res) => {
   res.json({ message: "Product removed" });
 });
 
-// Upload a product image (Admin only) — streams the buffered file from
+// Upload a product image (Admin only): streams the buffered file from
 // multer straight to Cloudinary and returns the hosted URL for the admin
 // UI to save on the product's `image` field.
 exports.uploadProductImage = asyncHandler(async (req, res) => {

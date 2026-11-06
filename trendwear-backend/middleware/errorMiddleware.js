@@ -1,4 +1,4 @@
-// 404 handler — mounted after all real routes, turns an unmatched route
+// 404 handler: mounted after all real routes, turns an unmatched route
 // into a normal error that flows through errorHandler below.
 const notFound = (req, res, next) => {
   const error = new Error(`Not Found - ${req.originalUrl}`);

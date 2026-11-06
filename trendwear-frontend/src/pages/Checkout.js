@@ -35,7 +35,7 @@ function Checkout() {
     return (
       <div className="container py-5 text-center">
         <h2 className="text-warning mb-3">Checkout</h2>
-        <p className="text-light">Your cart is empty — add something from the shop first.</p>
+        <p className="text-light">Your cart is empty. Please add something from the shop first.</p>
       </div>
     );
   }
